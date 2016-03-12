@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'gem/style.css' %}">
+    {# Load tag library #}
+    {% load bootstrap3 %}
+
+    {# Load CSS + javascript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {# Display django.contrib.messages as Bootstrap alerts #}
+</head>
+<body>
+
+
+
+<div class="container">
+    <div class="row">
+        <h3>Eventos</h3>
+        {% if eventos_list %}
+        <ul>
+            {% for evento in eventos_list %}
+                <li><a href="{% url 'gem:detail' evento.id %}">{{ evento.event_name }}</a> </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay eventos</p>
+{% endif %}
+    {% bootstrap_button "Save" button_type="submit" button_class="btn-primary" %}
+    </div>
+</div>
+
+
+
+</body>
+</html>

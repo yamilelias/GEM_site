@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento</title>
+</head>
+<body>
+<h3>{{ evento.event_name }}</h3>
+
+<p>Organizador: {{ evento.grupo_estudiantil }}</p>
+<p>Fecha: {{ evento.event_date }}</p>
+<p>Descripción: {{ evento.description }}</p>
+<p>Lugar: {{ evento.place }}</p>
+{% if evento.duration %}
+    <p>Duración: {{ evento.duration }}</p>
+{% endif %}
+
+</body>
+</html>
