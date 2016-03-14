@@ -17,25 +17,57 @@
 </head>
 <body>
 
+    <!-- Header Logo -->
+    <header class="masthead">
+        <div class="container">
+            <div class="text-center"><h1>GEM</h1></div>
+        </div>
+    </header>
 
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" id="nav">
+        <div class="container">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre nosotros</a></li>
+                <li><a href="task.html">Iniciar sesion</a></li>
+            </ul>
+        </div>
+    </nav> <!-- ./Navigation -->
 
-<div class="container">
-    <div class="row">
-        <h3>Eventos</h3>
-        {% if eventos_list %}
-        <ul>
-            {% for evento in eventos_list %}
-                <li><a href="{% url 'gem:detail' evento.id %}">{{ evento.event_name }}</a> </li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No hay eventos</p>
-{% endif %}
-    {% bootstrap_button "Save" button_type="submit" button_class="btn-primary" %}
-    </div>
-</div>
+    <!-- Content -->
+    <div class="container">
+        <div class="row">
+            <h3>Eventos</h3>
+            {% if eventos_list %}
+            <ul>
+                {% for evento in eventos_list %}
+                    <li><a href="{% url 'gem:detail' evento.id %}">{{ evento.event_name }}</a> </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No hay eventos</p>
+    {% endif %}
+        {% bootstrap_button "Save" button_type="submit" button_class="btn-primary" %}
+        </div> <!-- ./Container -->
+    </div> 
 
+    <!-- Footer -->
+    <footer id="footer" class="navbar-fixed-bottom">
+        <hr />
+        <div class="container"> 
+            <div class"col-md-6 pull-left">GEM &copy; 2016</div>
+            <div class"col-md-6 pull-right">Developed by <strong>Educated Racoons</strong></div> 
+        </div>
+    </footer> <!-- ./Footer -->
 
-
+    <!-- Script for navbar-->
+    <script>
+        $('#nav').affix({
+            offset: {
+                top: $('header').height()
+            }
+        });
+    </script>
 </body>
 </html>
