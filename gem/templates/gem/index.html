@@ -1,77 +1,191 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 {% load staticfiles %}
 
+<html>
+	<head>
+		<title>GEM</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" type="text/css" href="{% static 'gem/assets/css/bootstrap.min.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'gem/assets/css/main.css' %}"/>
+		<!--[if lte IE 9]><link rel="stylesheet" href="../../static/gem/assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="../../static/gem/assets/css/ie8.css" /><![endif]-->
+        <link rel="stylesheet" type="text/css" href="{% static 'gem/assets/css/style.css' %}"/>
+	</head>
+	<body>
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Eventos</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'gem/style.css' %}">
-    {# Load tag library #}
-    {% load bootstrap3 %}
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro" class="filter" data-filter="all">Eventos</a></li>
+							<li><a href="#one">Grupos estudiantiles</a></li>
+							<li><a href="#three">Contáctanos</a></li>
+							<li><a href="admin">Admin</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
 
-    {# Load CSS + javascript #}
-    {% bootstrap_css %}
-    {% bootstrap_javascript %}
-    {# Display django.contrib.messages as Bootstrap alerts #}
-</head>
-<body>
 
-    <!-- Header Logo -->
-    <header class="masthead">
-        <div class="container">
-            <div class="text-center"><h1>GEM</h1></div>
-        </div>
-    </header>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default" id="nav">
-        <div class="container">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="about.html">Sobre nosotros</a></li>
-                <li><a href="task.html">Iniciar sesion</a></li>
-            </ul>
-        </div>
-    </nav> <!-- ./Navigation -->
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-    <!-- Content -->
-    <div class="container">
-        <div class="row">
-            <h3>Eventos</h3>
-            {% if eventos_list %}
-            <ul>
-                {% for evento in eventos_list %}
-                    <li><a href="{% url 'gem:detail' evento.id %}">{{ evento.event_name }}</a> </li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>No hay eventos</p>
-    {% endif %}
-        {% bootstrap_button "Save" button_type="submit" button_class="btn-primary" %}
-        </div> <!-- ./Container -->
-    </div> 
 
-    <div class="container">
-        <p>Jalo! No mames... ya me encabrone</p>
-    </div>
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="row-height">
+									<div class="col-xs-12 col-md-4 col-height no-padding-left">
+										<div class="inside-full-height">
+											<div class="content">
+												<div class="btn-group-vertical">
+													<div class="filter btn my-btn" data-filter="all">Todos</div>
+                                                    {% for grupo_estudiantil in grupos_estudiantiles_list %}
+                                                        <div
+                                                                class="filter btn my-btn"
+                                                                data-filter=".grupo-estudiantil-{{ grupo_estudiantil.pk }}">
+                                                        {{ grupo_estudiantil.name }}
+                                                        </div>
+                                                    {% endfor %}
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-md-8 col-height col-top">
+										<div id="mix-container">
+                                            {% if eventos_list %}
+                                                {% for evento in eventos_list %}
+                                                    <div class="mix col-xs-12 col-md-6 grupo-estudiantil-{{ evento.pk }}">
+                                                        <div class="title">{{ evento.event_name }}</div>
+                                                        <div class="description">{{ evento.description }}</div>
+                                                        <div class="details">
+                                                            {{ evento.event_date }}
+                                                            <br>{{ evento.place }}
+                                                            {% if evento.duration %}
+                                                                <br>Duración: {{ evento.duration }}
+                                                            {% endif %}
+                                                        </div>
+                                                        <div class="col-xs-12 btn my-btn"><a href="#">Detalles</a> </div>
+                                                    </div>
+                                                {% endfor %}
+                                            {% else %}
+                                                <p>No hay eventos</p>
+                                            {% endif %}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
 
-    <!-- Footer -->
-    <footer id="footer" class="navbar-fixed-bottom">
-        <hr />
-        <div class="container"> 
-            <div class"col-md-6 pull-left">GEM &copy; 2016</div> 
-            <div class"col-md-6 pull-right">Developed by <strong>Educated Racoons</strong></div> 
-        </div>
-    </footer> <!-- ./Footer -->
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+                        {% for grupo_estudiantil in grupos_estudiantiles_list %}
+                            <section>
+{#                                <div class="col-xs-3z">#}
+{#                                    <img class="img-responsive" src="https://media.alienwarearena.com/media/grupo-de-personas-1740.jpg">#}
+{#                                </div>#}
+{#                                <div class="col-xs-6">#}
+                                    <a href="#" class="image"><img src="https://media.alienwarearena.com/media/grupo-de-personas-1740.jpg" alt="" data-position="center center"></a>
+{#                                </div>#}
+                                <div class="content">
+                                    <div class="inner">
+                                        <h2>{{ grupo_estudiantil.name }}</h2>
+                                        <p>{{ grupo_estudiantil.description }}</p>
+                                        <ul class="actions">
+                                            <li><a href="#intro" class="button filter" data-filter=".grupo-estudiantil-{{ grupo_estudiantil.pk }}">Conoce nuestros eventos</a> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
+                        {% endfor %}
+					</section>
 
-    <!-- Script for navbar-->
-    <script>
-        $('#nav').affix({
-            offset: {
-                top: $('header').height()
-            }
-        });
-    </script>
-</body>
+				<!-- Three -->
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Get in touch</h2>
+							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+							<div class="split style1">
+								<section>
+									<form method="post" action="#">
+										<div class="field half first">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="5"></textarea>
+										</div>
+										<ul class="actions">
+											<li><a href="" class="button submit">Send Message</a></li>
+										</ul>
+									</form>
+								</section>
+								<section>
+									<ul class="contact">
+										<li>
+											<h3>Address</h3>
+											<span>12345 Somewhere Road #654<br />
+											Nashville, TN 00000-0000<br />
+											USA</span>
+										</li>
+										<li>
+											<h3>Email</h3>
+											<a href="#">user@untitled.tld</a>
+										</li>
+										<li>
+											<h3>Phone</h3>
+											<span>(000) 000-0000</span>
+										</li>
+										<li>
+											<h3>Social</h3>
+											<ul class="icons">
+												<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
+												<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
+												<li><a href="#" class="fa-github"><span class="label">GitHub</span></a></li>
+												<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
+												<li><a href="#" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
+											</ul>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</section>
+			</div>
+
+
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy;Educated Raccoons 2016.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+            <script src="{% static 'gem/assets/js/jquery.min.js' %}"></script>
+            <script src="{% static 'gem/assets/js/jquery.scrollex.min.js' %}"></script>
+            <script src="{% static 'gem/assets/js/jquery.scrolly.min.js' %}"></script>
+            <script src="{% static 'gem/assets/js/skel.min.js' %}"></script>
+            <script src="{% static 'gem/assets/js/util.js' %}"></script>
+			<!--[if lte IE 8]><script src="../../static/gem/assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="{% static 'gem/assets/js/main.js' %}"></script>
+        <script src="{% static 'gem/assets/js/jquery.mixitup.min.js' %}"></script>
+        <script src="{% static 'gem/assets/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'gem/assets/js/my-js.js' %}"></script>
+
+	</body>
 </html>

@@ -11,6 +11,15 @@ from datetime import datetime
 class IndexView(generic.ListView):
     template_name = 'gem/index.html'
     context_object_name = 'eventos_list'
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView, self).get_context_data(**kwargs)
+        context.update({
+            # 'eventos_list': Evento.objects.all().order_by('-event_date'),
+            'grupos_estudiantiles_list': GrupoEstudiantil.objects.all(),
+        })
+        return context
+
     def get_queryset(self):
         return Evento.objects.all().order_by('-event_date')
 

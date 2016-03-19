@@ -8,6 +8,7 @@ from django.contrib.auth.models import Group, User
 
 class GrupoEstudiantil(models.Model):
     name = models.CharField(max_length=200)
+    description = models.TextField('Descripcion', default="Descripcion")
     owner = models.ForeignKey(Group)
 
     def __str__(self):

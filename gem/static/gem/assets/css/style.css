@@ -1,0 +1,136 @@
+a{
+    /*color: black;*/
+    text-decoration: no-underline;
+}
+
+#mix-container{
+    min-height: 100vh;
+}
+
+#intro h2{
+    /*color: #0f0f0f;*/
+    margin: 30px;
+    color: #dbcaca;
+}
+
+.mix{
+    display: none;
+    padding: 30px;
+    line-height: 1;
+}
+
+.mix .title{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.mix .my-btn{
+    margin-top: 10px;
+}
+
+.mix .description{
+    /*line-height: 15px;*/
+    /*letter-spacing: 1px;*/
+}
+
+.no-padding-left{
+    padding-left: 0;
+    border-radius: 0;
+}
+
+.btn-group-vertical{
+    width: 100%;
+}
+
+.my-btn {
+    font-family: "Courier New", monospace;
+    color: #5e5e5e;
+    font-weight: 300;
+    /*background-color: #5bc0de;*/
+    background: #dbcaca;
+    border-color: #dbd0da;
+}
+.my-btn:focus,
+.my-btn.focus {
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #1b6d85;
+}
+.my-btn:hover {
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc;
+}
+.my-btn:active,
+.my-btn.active,
+.open > .dropdown-toggle.my-btn {
+    color: #fff;
+    background-color: #341f69;
+    border-color: #8c8c8c;
+}
+.my-btn:active:hover,
+.my-btn.active:hover,
+.open > .dropdown-toggle.my-btn:hover,
+.my-btn:active:focus,
+.my-btn.active:focus,
+.open > .dropdown-toggle.my-btn:focus,
+.my-btn:active.focus,
+.my-btn.active.focus,
+.open > .dropdown-toggle.my-btn.focus {
+    color: #fff;
+    background-color: #269abc;
+    border-color: #1b6d85;
+}
+.my-btn:active,
+.my-btn.active,
+.open > .dropdown-toggle.my-btn {
+    background-image: none;
+}
+.my-btn.disabled:hover,
+.my-btn[disabled]:hover,
+fieldset[disabled] .my-btn:hover,
+.my-btn.disabled:focus,
+.my-btn[disabled]:focus,
+fieldset[disabled] .my-btn:focus,
+.my-btn.disabled.focus,
+.my-btn[disabled].focus,
+fieldset[disabled] .my-btn.focus {
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+.my-btn .badge {
+    color: #5bc0de;
+    background-color: #fff;
+}
+
+.inside-full-height {
+    /*
+    // if you want to give content full height give him height: 100%;
+    // with content full height you can't apply margins to the content
+    // content full height does not work in ie http://stackoverflow.com/questions/27384433/ie-display-table-cell-child-ignores-height-100
+    */
+    /*background: rgba(91, 192, 222, .4);*/
+    background: #dbcaca;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* columns of same height styles */
+
+.row-height {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+}
+.col-height {
+    display: table-cell;
+    float: none;
+    height: 100%;
+}
+.col-top {
+    vertical-align: top;
+}
