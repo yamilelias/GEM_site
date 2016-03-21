@@ -19,7 +19,7 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/../GEM_site\templates" />
+        <option value="$MODULE_DIR$/gem/templates" />
       </list>
     </option>
   </component>

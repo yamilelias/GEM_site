@@ -10,6 +10,8 @@ class GrupoEstudiantil(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField('Descripcion', default="Descripcion")
     owner = models.ForeignKey(Group)
+    logo = models.ImageField(upload_to='logos', null=True, blank=True)
+
 
     def __str__(self):
         return self.name
