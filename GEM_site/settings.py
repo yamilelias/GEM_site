@@ -15,6 +15,15 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Absolute filesystem path to the directory that will hold user-uploaded files.
+# Example: "/home2/media/media.lawrence.com/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# URL that handles the media served from MEDIA_ROOT. Make sure to use a
+# trailing slash.
+# Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
+MEDIA_URL = 'media/'
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
@@ -39,7 +48,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'gem.apps.GemConfig',
     'bootstrap3',
-    'nombres.apps.NombresConfig'
 ]
 
 MIDDLEWARE_CLASSES = [

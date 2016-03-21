@@ -19,5 +19,4 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('gem.urls'), name='gem'),
-    url(r'^nombres/', include('nombres.urls'), name='gem')
 ]
