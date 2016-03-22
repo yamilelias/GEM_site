@@ -40,8 +40,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django_admin_bootstrapped',
-    'gem.apps.GemConfig', # Goes first to override /admin/css/base.css
+    'gem.apps.GemConfig', # Goes first to override /admin/css/overrides.css
+    'django_admin_bootstrapped', # Bootstrap Admin Theme
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
