@@ -235,7 +235,6 @@ td.action-checkbox {
 }
 
 #content-main {
-    padding-top: 10%;
     clear: both;
 }
 
@@ -314,7 +313,18 @@ p.file-upload > input[type="file"] {
   border-color: #337ab7;
 }
 
+
+/******************************************************************************************************/
+/*                                                                                                    */
+/*                                          Custom Modifications                                      */
+/*                                                                                                    */
+/******************************************************************************************************/
+
 /* Login Form */
+
+.colM #content-main {
+    padding-top: 10%;
+}
 
 .form-signin-inner h2{
     color: #000;
@@ -350,7 +360,7 @@ p.file-upload > input[type="file"] {
     border-style: none;
 }
 
-@media(min-width: 768px){
+/*@media(min-width: 768px){
     .form-signin-inner h2{
     color: #000;
     text-transform: uppercase;
@@ -376,7 +386,7 @@ p.file-upload > input[type="file"] {
     .form-signin .form-actions .btn:hover{
         background: #593681;
     }
-}
+}*/
 
 /* Logout Form*/
 
@@ -411,4 +421,72 @@ p.file-upload > input[type="file"] {
     text-transform: uppercase;
     color: #fff;
     text-decoration: none;
+}
+
+/* Admin Site */
+
+#content{
+    padding-top: 1%;
+}
+
+.tabbable h2{
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 1%;
+    padding-top: 3%;
+}
+
+.tabbable .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #6C4795;
+   border-color: #6C4795;
+}
+
+.tabbable .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{
+   border-color: #6C4795;
+}
+
+.tabbable a:hover{
+    color: #D2D2D2;
+}
+
+/* Other pages */
+
+.object-tools .btn-primary{
+    background: #6C4795;
+    border-color: #6C4795;
+}
+
+.object-tools .btn-primary:hover{
+    /* Use !important to override some styles of template */
+    background: #4A3562 !important;
+    border-color: #4A3562 !important;
+}
+
+.results h2{
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 1%;
+    padding-top: 3%;
+}
+
+.results .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #8A61B8;
+   border-color: #8A61B8;
+}
+
+.results .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{
+   border-color: #6C4795;
+}
+
+.results a:hover{
+    color: #D2D2D2;
+}
+
+.actions input[type="submit"], input[type="reset"], input[type="button"], button, .button{
+    /* Use !important to override some styles of template */
+    background: #6C4795 !important;
+    border-color: #6C4795 !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    height: inherit;
 }
