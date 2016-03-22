@@ -40,13 +40,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django_admin_bootstrapped',
+    'gem.apps.GemConfig', # Goes first to override /admin/css/base.css
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'gem.apps.GemConfig',
     'bootstrap3',
 
 ]
@@ -132,3 +133,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Django Admin Bootstrapped
+# https://github.com/django-admin-bootstrapped/django-admin-bootstrapped
+
+DAB_FIELD_RENDERER = 'django_admin_bootstrapped.renderers.BootstrapFieldRenderer'
