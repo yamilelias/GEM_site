@@ -30,6 +30,9 @@ class Usuario(models.Model):
     usuario_apellido_paterno = models.CharField(max_length=200, unique=False)
     usuario_apellido_materno = models.CharField(max_length=200, unique=False, blank=True, null=True)
 
+    def __str__(self):
+        return self.usuario_name.__str__() + " " + self.usuario_apellido_paterno + " " + self.usuario_apellido_materno
+
 class Asistencia(models.Model):
     evento = models.ForeignKey(Evento)
     usuario_asistente = models.ForeignKey(Usuario)

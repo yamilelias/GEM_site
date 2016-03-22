@@ -64,3 +64,4 @@ class GrupoEstudiantilAdmin(admin.ModelAdmin):
 
 admin.site.register(GrupoEstudiantil, GrupoEstudiantilAdmin)
 admin.site.register(Evento, EventoAdmin)
+admin.site.register(Usuario)

@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'gem.apps.GemConfig',
     'bootstrap3',
+    'nested_inlines'
+
 ]
 
 MIDDLEWARE_CLASSES = [
