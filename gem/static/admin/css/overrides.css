@@ -2,7 +2,7 @@
 
 /* Reset */
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -10,6 +10,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font: inherit;
     vertical-align: baseline;
     font-family: Helvetica;
+}
+
+strong{
+    color: #000;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    font-family: Helvetica;
+}
+
+li a{
+
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -221,6 +235,7 @@ td.action-checkbox {
 }
 
 #content-main {
+    padding-top: 10%;
     clear: both;
 }
 
@@ -297,4 +312,103 @@ p.file-upload > input[type="file"] {
   color: #fff;
   background-color: #337ab7;
   border-color: #337ab7;
+}
+
+/* Login Form */
+
+.form-signin-inner h2{
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-signin .form-group .required{
+    color: #000;
+    padding-bottom: 5%;
+}
+
+.form-signin .form-group .form-control{
+    color: #000;
+    border-color: #000;
+    border-width: 1px;
+}
+
+.form-signin .form-actions .btn{
+    background: #6C409F;
+    border-color: #6C409F;
+}
+
+.form-signin .form-actions .btn:hover{
+    background: #593681;
+    border-color: #593681;
+}
+
+.form-signin .form-actions .btn:active{
+    border-color: none;
+    outline-style: none;
+    border-style: none;
+}
+
+@media(min-width: 768px){
+    .form-signin-inner h2{
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    }
+
+    .form-signin .form-group .required{
+        color: #000;
+        padding-bottom: 5%;
+    }
+
+    .form-signin .form-group .form-control{
+        color: #000;
+        border-color: #000;
+        border-width: 1px;
+    }
+
+    .form-signin .form-actions .btn{
+        background: #6C409F;
+    }
+
+    .form-signin .form-actions .btn:hover{
+        background: #593681;
+    }
+}
+
+/* Logout Form*/
+
+.breadcrumbs{
+    padding-top: 2%;
+}
+
+.logout-block{
+    text-align: center;
+    border-width: 1px;
+    border-radius: 5px;
+}
+.logout-block div{
+    margin: 0 auto;
+}
+
+.logout-block h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    font-size: x-large;
+}
+
+.logout-block .btn{
+    background: #fff;
+    text-transform: uppercase;
+    color: #6C409F;
+}
+
+.logout-block .btn:hover{
+    background: #6C409F;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
 }
