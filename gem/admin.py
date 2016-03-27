@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import GrupoEstudiantil, Evento, Asistencia, Usuario
+from gem.models import GrupoEstudiantil, Evento, Asistencia, Usuario
 from django.contrib.auth.models import Group, User, Permission
 
 for user in User.objects.all():
