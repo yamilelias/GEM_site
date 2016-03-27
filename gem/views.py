@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from models import GrupoEstudiantil, Evento, Asistencia, Usuario
+from gem.models import GrupoEstudiantil, Evento, Asistencia, Usuario
 from django.shortcuts import render, get_object_or_404
 from django.core.urlresolvers import reverse
 from django.views import generic
