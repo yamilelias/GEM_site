@@ -127,7 +127,7 @@ body {
 .selector > .selector-available > h2, .selector > .selector-chosen > h2 {
     text-align: left;
     background: rgba(211, 211, 211, 0.2);
-    color: #777;
+    color: #fff;
     border: 1px solid #ccc;
     border-bottom: none;
     font-size: 100%;
@@ -322,7 +322,7 @@ p.file-upload > input[type="file"] {
 
 /* Login Form */
 
-.colM #content-main {
+#content-main {
     padding-top: 10%;
 }
 
@@ -489,4 +489,66 @@ p.file-upload > input[type="file"] {
     color: #fff !important;
     font-weight: bold !important;
     height: inherit;
+}
+
+/* Widgets.css override*/
+
+.help-block{
+    color: #fff;
+}
+
+a.selector-chooseall, a.selector-clearall{
+    color: #fff;
+}
+
+select + .related-widget-wrapper-link, .related-widget-wrapper-link + .related-widget-wrapper-link{
+    color: #6C4795;
+}
+
+/* Evento form*/
+
+fieldset h2{
+    color: #6C4795;
+    padding: 2% 0 2% 2%;
+    text-align: center;
+    font-weight: bold;
+    background-color: none; 
+}
+/*
+fieldset{
+    padding-bottom: 5%;
+}*/
+
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{
+    border: 1px solid #6C4795;
+}
+
+.table .required {
+    font-weight: bold;
+    color: #6C4795;
+}
+
+.table th {
+    color: #6C4795;
+}
+
+.table a{
+    color: #6C4795;
+    font-style: none;
+}
+
+.form-actions{
+    padding-top: 5%;
+}
+
+.btn-default:hover{
+    color: #6C4795 !important;
+    background: #fff;
+    border-color: #6C4795 !important;
+}
+
+.btn-primary:hover{
+    color: #6C4795 !important;
+    background-color: #fff;
+    border-color: #6C4795 !important;
 }
