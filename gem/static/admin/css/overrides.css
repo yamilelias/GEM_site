@@ -519,20 +519,20 @@ fieldset{
     padding-bottom: 5%;
 }*/
 
-.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{
+#asistencia_set-group .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{
     border: 1px solid #6C4795;
 }
 
-.table .required {
+#asistencia_set-group .table .required {
     font-weight: bold;
     color: #6C4795;
 }
 
-.table th {
+#asistencia_set-group .table th {
     color: #6C4795;
 }
 
-.table a{
+#asistencia_set-group .table a{
     color: #6C4795;
     font-style: none;
 }
