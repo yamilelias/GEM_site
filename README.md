@@ -1,5 +1,6 @@
 #Grupos Estudiantiles Manager
 [![Build Status](https://travis-ci.org/yamilelias/GEM_site.svg?branch=master)](https://travis-ci.org/yamilelias/GEM_site)
+[![Coverage Status](https://coveralls.io/repos/github/AarellanoH/GEM_site/badge.svg?branch=master)](https://coveralls.io/github/AarellanoH/GEM_site?branch=master)
 
 Proyecto del Tecnológico de Monterrey para la clase de Aministración de proyectos siendo participes los alumnos de la carrera de Ing. en Tecnologías de la Información y Comunicaciones.
 
